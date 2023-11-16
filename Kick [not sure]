@@ -21,9 +21,10 @@ end)
 --buttons--
 
 tab1:CreateButton("kick", function()
---mainCode--
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RBLXPLOITER/Kick-Gui-BETA-/main/Kick%20%5Bnot%20sure%5D"))():
 end)
 
 script.parent.MouseButton1Click:Connect(function()
         game.Players:WaitForChild(Script.Parent.Parent.name.Text):Kick("You have been kicked for: "..script.Parent.Parent.reason.Text)
 end)
+
