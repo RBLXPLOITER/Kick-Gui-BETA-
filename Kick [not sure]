@@ -1,0 +1,29 @@
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create("KickPlr [Beta]", -- Name here."Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled"."E" -- You can put any keybind here to open close.ý)
+
+--Tabs--
+
+local tab1 = window:CreateTab("Main")
+
+--warningTAB1--
+tab1:CreateWarning("Warning This script is in beta, You may occur bugs.")
+
+--TextBox--
+
+tab1:CreateTextbox("name", function(a)
+print(a)
+end)
+
+tab1:CreateTextbox("reason", function(a)
+print(a)
+end)
+
+--buttons--
+
+tab1:CreateButton("kick", function()
+--mainCode--
+end)
+
+script.parent.MouseButton1Click:Connect(function()
+        game.Players:WaitForChild(Script.Parent.Parent.name.Text):Kick("You have been kicked for: "..script.Parent.Parent.reason.Text)
+end)
